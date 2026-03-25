@@ -1,0 +1,14 @@
+1. Customer deposits check via ATM or Quick Deposit.
+2. Image of check is captured and sent to image processing system.
+3. Image quality check is performed.
+4. If image fails quality, sent for manual repair.
+5. If passed, sent to fraud detection system.
+6. Fraud system flags suspicious checks.
+7. Non-flagged checks go to clearing system.
+8. Clearing system prepares Image Cash Letter (ICL).
+9. ICL sent to Federal Reserve / clearing network.
+10. Response received (paid/returned).
+11. Returned checks go to exception processing.
+12. Final posting to customer account.
+13. Duplicate detection done manually in some cases.
+14. Reconciliation between systems done manually.

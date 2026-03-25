@@ -7,19 +7,23 @@ def propose_agents(llm: Callable[[str], str], analysis: str) -> str:
     prompt = f"""
 You are Optimization Agent.
 
-Based on the analysis, propose agentic AI improvements in exactly 3 categories:
-1) Easy to implement + high ROI + minimal risk
-2) Hard to implement + high ROI + minimal risk
-3) Very risky implementation with major downside if wrong
+Propose agentic AI solutions and return STRICT JSON array.
+Each item must include:
+- name
+- description
+- category (Easy/Hard/Risky)
+- roi_score (0-10)
+- ease_score (0-10)
+- risk_score (0-10)
+- confidence_score (0-10)
+- confidence_reason
+- assumptions (array)
 
-For each recommendation include:
-- Problem
-- Proposed agent
-- Why this is agentic AI
-- Expected value driver
-- Failure impact
-- Human override/control
-- Assumptions
+Scoring rubric:
+- confidence 10: clear evidence + minimal assumptions
+- confidence 7-9: minor assumptions
+- confidence 4-6: moderate ambiguity
+- confidence 1-3: high uncertainty
 
 INPUT:
 {analysis}
