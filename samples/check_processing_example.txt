@@ -1,0 +1,9 @@
+ATM checks received -> image quality validation queue
+Quick deposit batch send to central ingest queue
+Lockbox file route to preprocessing
+ICL handoff to posting queue
+Manual exception review for unreadable CAR/LAR fields
+Manual exception review for unreadable CAR/LAR fields
+Repair team send to balancing queue
+Volume today: 120,000 items, exceptions: 4,500
+illegible step ???
